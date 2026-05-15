@@ -391,6 +391,25 @@ d3.csv("data/mxmh_survey_results_rename.csv")
 				.attr("fill", "black")
 				.text("Rankings of Mental Health Factors Based on Favorite Genre"),
 		);
+		g3.join("g").call((g) =>
+			g
+				.append("text")
+				.attr("y", parPointsHeight + parPointsTop + parPointsMargin.bottom)
+				.attr("x", parPointsWidth / 2)
+				.attr("fill", "black")
+				.text("Mental Health Factors"),
+		);
+
+		g3.join("g").call((g) =>
+			g
+				.append("text")
+				.attr("y", 50)
+				.attr("x", -parPointsTop - parPointsHeight / 2)
+				.attr("fill", "black")
+				.attr("text-anchor", "middle")
+				.attr("transform", "rotate(-90)")
+				.text("Ranking out of 10"),
+		);
 	})
 	.catch(function (error) {
 		console.log(error);
